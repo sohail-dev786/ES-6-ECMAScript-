@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LET</title>
+    <style>
+        #box
+        {
+            display: flex;
+            justify-content: space-around;
+        }
+        #box > div{
+            height: 5em;
+            width: 5em;
+            background-color: red;
+        }
+
+        h1{
+            text-align: center;
+            color: purple;
+            font-weight: bold;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>LET</h1>
+    <div id="box"></div>
+    <script type="text/javascript">
+    
+    var div;
+    var box=document.getElementById("box");
+    
+    for(let i=1;i<=5;i++)
+    {
+
+        div= document.createElement("div");
+        div.onclick=function()
+        {
+            alert("YOU HAVE CLICK "+i+" BOX")
+        };
+    box.appendChild(div);
+    }
+    </script>
+</body>
+</html>
